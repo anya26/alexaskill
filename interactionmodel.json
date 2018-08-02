@@ -1,0 +1,36 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "say a sentence",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ReadSentenceIntent",
+                    "slots": [],
+                    "samples": [
+                        "read a random sentence",
+                        "say a random sentence",
+                        "read a sentence",
+                        "say a sentence"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
