@@ -18,6 +18,8 @@ var handlers = {
     },
     
     'UnlockIntent': function(){
+            this.response.speak("unlocking door");
+            this.emit(':responseReady');
             var optionspost = {
                 //http://irt-ap.cs.columbia.edu:8888/actuator/lock
                 host : 'irt-ap.cs.columbia.edu',
@@ -33,14 +35,14 @@ var handlers = {
            
                 res.on('data', function(d) {
                     console.info('POST result:\n');
-                    process.stdout.write(jsonObject);
-                    console.info('\n\nPOST completed');
+                    // process.stdout.write(jsonObject);
+                    // console.info('\n\nPOST completed');
                 });
             
             });
             reqPost.end(jsonObject);
-            this.response.speak("door is unlocked");
-            this.emit(':responseReady');
+            
+            
     },
     
 }
